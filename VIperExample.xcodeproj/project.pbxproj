@@ -16,6 +16,10 @@
 		F11C66522CB5686700A7CF7D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C66512CB5686700A7CF7D /* HomeInteractor.swift */; };
 		F11C66542CB5687000A7CF7D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C66532CB5687000A7CF7D /* HomeViewController.swift */; };
 		F11C66572CB5694C00A7CF7D /* HomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C66562CB5694C00A7CF7D /* HomeProtocol.swift */; };
+		F11C665A2CB5AC8600A7CF7D /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C66592CB5AC8600A7CF7D /* HomeRepository.swift */; };
+		F11C665C2CB5B14E00A7CF7D /* OffersEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C665B2CB5B14E00A7CF7D /* OffersEntity.swift */; };
+		F11C665F2CB5B27700A7CF7D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C665E2CB5B27700A7CF7D /* ApiClient.swift */; };
+		F11C66612CB5B46400A7CF7D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C66602CB5B46400A7CF7D /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		F11C66512CB5686700A7CF7D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		F11C66532CB5687000A7CF7D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F11C66562CB5694C00A7CF7D /* HomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocol.swift; sourceTree = "<group>"; };
+		F11C66592CB5AC8600A7CF7D /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		F11C665B2CB5B14E00A7CF7D /* OffersEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersEntity.swift; sourceTree = "<group>"; };
+		F11C665E2CB5B27700A7CF7D /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		F11C66602CB5B46400A7CF7D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		F11C66322CB55C2E00A7CF7D /* VIperExample */ = {
 			isa = PBXGroup;
 			children = (
+				F11C665D2CB5B25A00A7CF7D /* ApiClient */,
 				F11C66472CB567A200A7CF7D /* Home */,
 				F11C66332CB55C2E00A7CF7D /* AppDelegate.swift */,
 				F11C66352CB55C2E00A7CF7D /* SceneDelegate.swift */,
@@ -77,7 +86,7 @@
 			children = (
 				F11C66552CB5693100A7CF7D /* Protocol */,
 				F11C664C2CB5680400A7CF7D /* Router */,
-				F11C664B2CB567FF00A7CF7D /* Entidad */,
+				F11C664B2CB567FF00A7CF7D /* Entity */,
 				F11C664A2CB567F800A7CF7D /* Presenter */,
 				F11C66492CB567F100A7CF7D /* Interactor */,
 				F11C66482CB567E900A7CF7D /* View */,
@@ -96,6 +105,7 @@
 		F11C66492CB567F100A7CF7D /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				F11C66582CB5AC5500A7CF7D /* Repository */,
 				F11C66512CB5686700A7CF7D /* HomeInteractor.swift */,
 			);
 			path = Interactor;
@@ -109,11 +119,12 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		F11C664B2CB567FF00A7CF7D /* Entidad */ = {
+		F11C664B2CB567FF00A7CF7D /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				F11C665B2CB5B14E00A7CF7D /* OffersEntity.swift */,
 			);
-			path = Entidad;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		F11C664C2CB5680400A7CF7D /* Router */ = {
@@ -130,6 +141,23 @@
 				F11C66562CB5694C00A7CF7D /* HomeProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F11C66582CB5AC5500A7CF7D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F11C66592CB5AC8600A7CF7D /* HomeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F11C665D2CB5B25A00A7CF7D /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				F11C665E2CB5B27700A7CF7D /* ApiClient.swift */,
+				F11C66602CB5B46400A7CF7D /* NetworkError.swift */,
+			);
+			path = ApiClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,13 +230,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11C665A2CB5AC8600A7CF7D /* HomeRepository.swift in Sources */,
 				F11C66572CB5694C00A7CF7D /* HomeProtocol.swift in Sources */,
 				F11C66542CB5687000A7CF7D /* HomeViewController.swift in Sources */,
 				F11C664E2CB5685300A7CF7D /* HomeRouter.swift in Sources */,
 				F11C66342CB55C2E00A7CF7D /* AppDelegate.swift in Sources */,
 				F11C66522CB5686700A7CF7D /* HomeInteractor.swift in Sources */,
+				F11C665C2CB5B14E00A7CF7D /* OffersEntity.swift in Sources */,
 				F11C66502CB5685E00A7CF7D /* HomePresenter.swift in Sources */,
 				F11C66362CB55C2E00A7CF7D /* SceneDelegate.swift in Sources */,
+				F11C66612CB5B46400A7CF7D /* NetworkError.swift in Sources */,
+				F11C665F2CB5B27700A7CF7D /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

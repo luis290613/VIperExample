@@ -29,4 +29,10 @@ extension HomeViewController : HomePresenterToViewProtocol {
         title = "Hide Loader"
         view.backgroundColor = .green
     }
+    
+    func printList(list: OffersEntity) {
+        list.offers.forEach { offer in
+            print("Oferta: \(offer.title)")
+        }
+    }
 }

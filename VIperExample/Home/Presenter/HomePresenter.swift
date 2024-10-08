@@ -22,8 +22,11 @@ extension HomePresenter : HomeViewToPresenterProtocol {
 }
 
 extension HomePresenter : HomeInteractorToPresenterProtocol {
-    func success() {
-        view?.hideLoader()
+    func success(list: OffersEntity) {
+        DispatchQueue.main.async {
+            self.view?.hideLoader()
+            self.view?.printList(list: list)
+        }
     }
     
     func failure() {

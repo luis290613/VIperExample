@@ -12,6 +12,7 @@ protocol HomePresenterToViewProtocol : AnyObject {
     var presenter: HomeViewToPresenterProtocol? { get set }
     func showLoader()
     func hideLoader()
+    func printList(list: OffersEntity)
 }
 
 
@@ -26,7 +27,7 @@ protocol HomeViewToPresenterProtocol : AnyObject {
 }
 // MARK: Interactor -> Presenter
 protocol HomeInteractorToPresenterProtocol : AnyObject {
-    func success()
+    func success(list: OffersEntity)
     func failure()
 }
 
