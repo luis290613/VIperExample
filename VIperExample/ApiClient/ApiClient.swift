@@ -7,15 +7,19 @@
 
 import Foundation
 
+enum EndPoint: String {
+    case listOffers = "/offers/list"
+}
+
 protocol APIClientProtocol {
-    func request<T: Decodable>(endpoint: String, completion: @escaping (Result<T, NetworkError>) -> Void)
+    func request<T: Decodable>(endpoint: EndPoint, completion: @escaping (Result<T, NetworkError>) -> Void)
 
 }
 
 class APIClient: APIClientProtocol {
-    func request<T: Decodable>(endpoint: String, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    func request<T: Decodable>(endpoint: EndPoint, completion: @escaping (Result<T, NetworkError>) -> Void) {
         
-        guard let url = URL(string: "https://z74vd.wiremockapi.cloud\(endpoint)") else {
+        guard let url = URL(string: "https://z74vd.wiremockapi.cloud\(endpoint.rawValue)") else {
             completion(.failure(NetworkError.invalidURL))
             return
         }
@@ -36,23 +40,8 @@ class APIClient: APIClientProtocol {
             } catch {
                 completion(.failure(.decodingError))
             }
-            
-            
         }.resume()
     }
 }
 
 
-//class APIClientMock: APIClientProtocol {
-//    
-//    var mockData: Data?
-//    var mockError: Error?
-//    
-//    func request(endpoint: String, completion: @escaping (Result<Data, NetworkError>) -> Void) {
-//        if let error = mockError {
-//            completion(.failure(.serverError))
-//        } else if let data = mockData {
-//            completion(.success(data))
-//        }
-//    }
-//}

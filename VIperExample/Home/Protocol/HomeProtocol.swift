@@ -28,7 +28,7 @@ protocol HomeViewToPresenterProtocol : AnyObject {
 // MARK: Interactor -> Presenter
 protocol HomeInteractorToPresenterProtocol : AnyObject {
     func success(list: OffersEntity)
-    func failure()
+    func failure(error: NetworkError)
 }
 
 

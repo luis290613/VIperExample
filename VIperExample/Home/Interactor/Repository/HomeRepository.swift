@@ -32,7 +32,15 @@ class HomeRepositoryImplementation: HomeRepositoryProtocol {
     
     func getListOfferts(completion: @escaping (Result<OffersEntity, NetworkError>) -> Void) {
         
-        apiClient.request(endpoint: "/offers/list") { (result: Result<OffersEntity, NetworkError>) in
+        
+        // Si solo se maneja llamada https entonces se puede manejar así
+        /* 
+         apiClient.request(endpoint: .listOffers) { (result: Result<OffersEntity, NetworkError>) in
+         completion(result)
+        }
+        */
+        
+        apiClient.request(endpoint: .listOffers) { (result: Result<OffersEntity, NetworkError>) in
             
             switch result {
             case .success(let success):

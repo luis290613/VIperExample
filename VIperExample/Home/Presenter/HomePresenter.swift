@@ -29,7 +29,7 @@ extension HomePresenter : HomeInteractorToPresenterProtocol {
         }
     }
     
-    func failure() {
+    func failure(error: NetworkError) {
         view?.hideLoader()
     }
 }

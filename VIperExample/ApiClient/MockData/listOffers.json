@@ -1,0 +1,20 @@
+{
+  "title": "Listado de ofertas",
+  "offers": [
+    {
+      "icon": "",
+      "title": "Mock - No más preocupaciones!",
+      "description": "Prestamos al instante"
+    },
+    {
+      "icon": "",
+      "title": "Mock - Entradas a la venta",
+      "description": "En la sección de ventas"
+    },
+    {
+      "icon": "",
+      "title": "Mock - Viaja por el feriado",
+      "description": "Escoge un destino"
+    }
+  ]
+}

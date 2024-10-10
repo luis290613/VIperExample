@@ -13,6 +13,10 @@ class HomeInteractor {
     
     init(repository: HomeRepositoryProtocol = HomeRepositoryImplementation(apiClient: APIClient())) {
         self.repository = repository
+        
+        if MockServices.shared.useMocks {
+            self.repository = HomeRepositoryImplementation(apiClient: ApiClientMock())
+        }
     }
 }
 
@@ -28,6 +32,7 @@ extension HomeInteractor : HomePresenterToInteractorProtocol {
                 
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
+                presenter?.failure(error: error)
             }
         }
     }
