@@ -31,5 +31,10 @@ extension HomePresenter : HomeInteractorToPresenterProtocol {
     
     func failure(error: NetworkError) {
         view?.hideLoader()
+        
+        DispatchQueue.main.async {
+            self.view?.hideLoader()
+            self.view?.showAlert(error: error)
+        }
     }
 }

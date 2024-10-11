@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController : HomePresenterToViewProtocol {    
+extension HomeViewController : HomePresenterToViewProtocol {
     
     func showLoader() {
         title = "Show Loader"
@@ -34,5 +34,9 @@ extension HomeViewController : HomePresenterToViewProtocol {
         list.offers.forEach { offer in
             print("Oferta: \(offer.title)")
         }
+    }
+    
+    func showAlert(error: NetworkError) {
+        print("showAlert : \(error)")
     }
 }

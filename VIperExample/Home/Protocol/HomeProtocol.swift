@@ -13,6 +13,7 @@ protocol HomePresenterToViewProtocol : AnyObject {
     func showLoader()
     func hideLoader()
     func printList(list: OffersEntity)
+    func showAlert(error: NetworkError)
 }
 
 

@@ -26,6 +26,7 @@
 		F1D920F32CB6B3AB00286793 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D920F22CB6B3AB00286793 /* JSONLoader.swift */; };
 		F1D920F52CB6B8F700286793 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D920F42CB6B8F700286793 /* MockServices.swift */; };
 		F1D920F72CB6CB2B00286793 /* ApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D920F62CB6CB2B00286793 /* ApiClientMock.swift */; };
+		F1EF7B582CB8219B0074C776 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF7B572CB8219B0074C776 /* HomePresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		F1D920F22CB6B3AB00286793 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		F1D920F42CB6B8F700286793 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
 		F1D920F62CB6CB2B00286793 /* ApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientMock.swift; sourceTree = "<group>"; };
+		F1EF7B572CB8219B0074C776 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				F1A1B6702CB6AEB800B855A3 /* HomeInteractorTests.swift */,
+				F1EF7B572CB8219B0074C776 /* HomePresenterTests.swift */,
 			);
 			path = VIperExampleTests;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A1B6712CB6AEB800B855A3 /* HomeInteractorTests.swift in Sources */,
+				F1EF7B582CB8219B0074C776 /* HomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
